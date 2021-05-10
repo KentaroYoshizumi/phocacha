@@ -15,6 +15,12 @@ class CamerasController < ApplicationController
         end
     end
     
+    def destroy
+    current_user.cameras.find(params[:id]).destroy
+
+    redirect_to [current_user]
+  end
+    
     private
     
     def camera_params
