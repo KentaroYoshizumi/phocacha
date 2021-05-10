@@ -1,0 +1,17 @@
+<h3>写真投稿</h3>
+
+<%= form_with model: @photo, local: true do |f| %>
+  <div>
+      <%= f.file_field :image %>
+  </div>
+  
+  <div>
+      <p>何のカメラで撮影しましたか？</p>
+      <%= f.text_area :caption %>
+  </div>
+  
+  <div>
+      <%= f.submit %>
+  </div>
+  
+ <% end %>

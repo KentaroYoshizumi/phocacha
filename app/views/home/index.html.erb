@@ -11,6 +11,15 @@
     <%= link_to 'カメラ投稿', [:new, :camera] %>
 </div>
 
+<div>
+    <%= link_to '写真投稿', [:new, :photo] %>
+</div>
+
 <% current_user.cameras.each do |camera| %>
 <%= image_tag camera.image %>
+<% end %>
+
+<% current_user.photos.each do |photo| %>
+<p><%= photo.caption %></p>
+<%= image_tag photo.image %>
 <% end %>
