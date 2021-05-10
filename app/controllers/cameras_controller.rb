@@ -9,7 +9,7 @@ class CamerasController < ApplicationController
         @camera = current_user.cameras.new(camera_params)
         
         if @camera.save
-            redirect_to photo_url
+            redirect_to root_url
         else
             render :new
         end
