@@ -2,4 +2,15 @@
 <div>
     <%= link_to 'logout', destroy_user_session_path, method: :delete %>
 </div>
+
+<div>
 <%= link_to 'ゲストログイン（閲覧用）', home_guest_sign_in_path, method: :post %>
+</div>
+
+<div>
+    <%= link_to 'カメラ投稿', [:new, :camera] %>
+</div>
+
+<% current_user.photos.each do |photo| %>
+<%= image_tag photo.image %>
+<% end %>

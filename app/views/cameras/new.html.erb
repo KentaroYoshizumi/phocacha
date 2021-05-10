@@ -1,0 +1,11 @@
+<h1>カメラ投稿</h1>
+
+<%= form_with model: @camera, local: true do |f| %>
+  <div>
+      <%= f.file_field :image %>
+  </div>
+  
+  <div>
+      <%= f.submit %>
+  </div>
+<% end %>
