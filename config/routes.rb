@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   
   resources :cameras do 
       resource :like
-      
+  end
   resources :photos do 
       resource :like
+  end
 end
